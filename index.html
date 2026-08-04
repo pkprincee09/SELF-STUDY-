@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>Self Study Library Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage">
+  <div class="login-box">
+    <div class="star-emblem">📚</div>
+    <div class="login-title">SELF STUDY LIBRARY</div>
+    <div class="login-subtitle">SMART READING SPACE</div>
+    <div class="login-divider"></div>
+
+    <div class="login-selector" id="loginSelector">
+      <button class="login-option active" data-role="admin" onclick="switchLoginRole('admin')">👨‍💼 Admin</button>
+      <button class="login-option" data-role="student" onclick="switchLoginRole('student')">👨‍🎓 Student</button>
+    </div>
+
+    <div id="adminLoginFields">
+      <label class="field-label">Admin ID</label>
+      <input class="field-input" id="loginId" type="text" placeholder="admin" autocomplete="off" value="admin">
+      <label class="field-label">Password</label>
+      <input class="field-input" id="loginPwd" type="password" placeholder="••••••" value="12345">
+    </div>
+
+    <div id="studentLoginFields" style="display:none;">
+      <label class="field-label">Student ID / Mobile</label>
+      <input class="field-input" id="studentLoginId" type="text" placeholder="STU-0001 or 9876543210" autocomplete="off" value="STU-0001">
+      <label class="field-label">Password</label>
+      <input class="field-input" id="studentLoginPwd" type="password" placeholder="••••••" value="STU-0001
