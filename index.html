@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1b2a">
+  <meta name="description" content="Smart School Management — a modern school ERP frontend starter.">
+  <title>Smart School Management | NextOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/storage.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Smart School home">
+        <span class="brand-mark">N</span><span class="brand-copy"><strong>NextOS</strong><small>SMART SCHOOL ERP</small></span>
+      </a>
+      <div class="school-switcher"><span class="school-avatar">SS</span><span><b>Sunrise Public School</b><small>Demo workspace</small></span><span class="chevron">⌄</span></div>
+      <nav class="nav" aria-label="Main navigation">
+        <p class="nav-label">WORKSPACE</p>
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <p class="nav-label">SCHOOL MANAGEMENT</p>
+        <button class="nav-item" data-page="students"><span>♙</span> Students <em id="studentNavCount">24</em></button>
+        <button class="nav-item" data-page="teachers"><span>♧</span> Teachers</button>
+        <button class="nav-item" data-page="classes"><span>▤</span> Classes & Sections</button>
+        <button class="nav-item" data-page="attendance"><span>◷</span> Attendance</button>
+        <button class="nav-item" data-page="fees"><span>₹</span> Fees & Payments</button>
+        <button class="nav-item" data-page="exams"><span>✎</span> Examinations</button>
+        <button class="nav-item" data-page="homework"><span>▣</span> Homework</button>
+        <button class="nav-item" data-page="timetable"><span>▦</span> Timetable</button>
+        <button class="nav-item" data-page="transport"><span>♧</span> Transport</button>
+        <button class="nav-item" data-page="library"><span>▤</span> Library</button>
+        <p class="nav-label">COMMUNICATION</p>
+        <button class="nav-item" data-page="notices"><span>◉</span> Notices <i class="unread-dot"></i></button>
+        <button class="nav-item" data-page="reports"><span>▥</span> Reports</button>
+        <p class="nav-label">SYSTEM</p>
+        <button class="nav-item" data-page="users"><span>♙</span> Users & Roles</button>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✦</span><b>Need a hand?</b><p>Explore the demo workspace and plan your school's setup.</p><button data-page="settings" class="text-button">Setup guide →</button></div><div class="user-mini"><div class="avatar avatar-purple">PK</div><span><b>School Admin</b><small>Administrator</small></span><button class="icon-button" id="profileMenu" aria-label="Profile options">•••</button></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button><div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="breadcrumbCurrent">Dashboard</strong></div></div>
+        <div class="topbar-actions"><span class="sync-status"><i></i><span id="syncLabel">Demo mode</span></span><button class="icon-button notification-button" id="notificationButton" aria-label="Notifications">♧<i></i></button><div class="top-avatar avatar avatar-purple">PK</div></div>
+      </header>
+      <div class="content" id="pageContent" tabindex="-1"></div>
+      <footer class="footer"><span>© <span id="year"></span> NextOS Smart School Management</span><span>Frontend starter · Backend-ready architecture</span></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><p class="eyebrow" id="modalEyebrow">WORKSPACE</p><h2 id="modalTitle">Add record</h2></div><button class="icon-button" id="modalClose" aria-label="Close dialog">×</button></div><div id="modalBody"></div></section></div>
+</body>
+</html>
